@@ -96,5 +96,26 @@
             chatBox.style.display = "block";
         }
     </script>
+    <script>
+    function hoveredNo() {
+        var btn = document.getElementById("no");
+        var container = document.querySelector(".button-container");
+        var maxTop = container.clientHeight - btn.clientHeight;
+        var maxLeft = container.clientWidth - btn.clientWidth;
+        var top = Math.floor(Math.random() * maxTop);
+        var left = Math.floor(Math.random() * maxLeft);
+        btn.style.top = top + "px";
+        btn.style.left = left + "px";
+    }
+
+    function clickYes() {
+        document.getElementById("yes").style.display = "none";
+        document.getElementById("no").style.display = "none";
+        var chatBox = document.getElementById("chatBox");
+        chatBox.innerText = "Đấy, ngay từ đầu bấm không nhận có phải là nhanh không, thôi thì cũng chúc bạn có một ngày 8/3 vui vẻ, nhiều may mắn, ngày càng xinh gái và thành công hennn";
+        chatBox.style.display = "block";
+    }
+</script>
+
 </body>
 </html>
