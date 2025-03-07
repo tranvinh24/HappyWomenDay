@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bạn có phải là chó không?</title>
@@ -13,9 +15,15 @@
             padding: 0;
         }
         h1 {
-            margin-top: 50px;
-            color: #333;
-        }
+    margin-top: 50px;
+    color: #e65100;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
         .button-container {
             position: relative;
             margin-top: 50px;
@@ -54,25 +62,29 @@
             top: 180px;
         }
         .chat-box {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 400px;
-            background: white;
-            border: 3px solid #333;
-            border-radius: 10px;
-            padding: 20px;
-            font-size: 20px;
-            font-weight: bold;
-            text-align: center;
-            display: none;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-        }
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    background: #fff9c4;
+    border: 3px solid #ff9800;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    display: none;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    font-family: "Poppins", sans-serif;
+    color: #e65100;
+}
+
     </style>
 </head>
 <body>
-    <h1>Bạn có muốn nhận lời chúc 8/3 không?</h1>
+    <h1>🎉 Bạn có muốn nhận lời chúc 8/3 không? 💐</h1>
+
     <div class="button-container">
         <button id="yes" onclick="clickYes()">Éo! Ko thèm</button>
         <button id="no" onmouseover="hoveredNo()">Có nha ní</button>
@@ -92,11 +104,12 @@
 
         function clickYes() {
             var chatBox = document.getElementById("chatBox");
-            chatBox.innerText = "Đấy,ngay từ đầu bấm không nhận có phải là nhanh không,thôi thì cũng chúc bạn có một ngày 8/3 vui vẻ,nhiều may mắn,ngày càng xinh gái và thành công hennn";
+            chatBox.innerText = "Đấy,ngay từ đầu bấm không nhận có phải là nhanh không.Thôi thì cũng chúc bạn có một ngày 8/3 vui vẻ,nhiều may mắn,ngày càng xinh gái và thành công hennn";
             chatBox.style.display = "block";
         }
     </script>
     <script>
+<<<<<<< HEAD
     function hoveredNo() {
         var btn = document.getElementById("no");
         var container = document.querySelector(".button-container");
@@ -117,5 +130,27 @@
     }
 </script>
 
+=======
+        function hoveredNo() {
+            var btn = document.getElementById("no");
+            var container = document.querySelector(".button-container");
+            var maxTop = container.clientHeight - btn.clientHeight;
+            var maxLeft = container.clientWidth - btn.clientWidth;
+            var top = Math.floor(Math.random() * maxTop);
+            var left = Math.floor(Math.random() * maxLeft);
+            btn.style.top = top + "px";
+            btn.style.left = left + "px";
+        }
+    
+        function clickYes() {
+            document.getElementById("yes").style.display = "none";
+            document.getElementById("no").style.display = "none";
+            var chatBox = document.getElementById("chatBox");
+            chatBox.innerText = "Đấy, ngay từ đầu bấm không nhận có phải là nhanh không, thôi thì cũng chúc bạn có một ngày 8/3 vui vẻ, nhiều may mắn, ngày càng xinh gái và thành công hennn";
+            chatBox.style.display = "block";
+        }
+    </script>
+    
+>>>>>>> 027eb91 (Cập nhật logic ẩn nút khi bảng thông báo xuất hiện)
 </body>
 </html>
